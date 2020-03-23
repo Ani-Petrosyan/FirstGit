@@ -1,0 +1,36 @@
+  
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+    <script>
+
+        // Գտնել միջինում քանի անգամ է ընկնում զառը 6 , Փորձը կրկնել այնքան մինչև 6 ընկնի 1200 անգամ (Math.floor(Math.random() * 6) + 1;)
+
+        let a=0;           
+        let b=0;            
+        let c=0;           
+
+        while(c<=1200) {
+
+            a = (Math.floor( Math.random() * 6 ) +1);
+
+             if (a===6) {
+
+                c+=1;
+            }
+
+            b+=1;
+        }
+
+        document.write(`Նետումների քանակը ${b}, Վեց ընկնելու հավանականություն ${b/c}`);
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>
+
+  
