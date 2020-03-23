@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Third Project</title>
+</head>
+<body>
+
+        <p>Ընտրեք ապրանքը </p>
+
+        <button onclick="myFunction('tabat')" id="tabat" value="Տաբատ"> Տաբատ <br> (120.000 AMD)</button>
+        <button onclick="myFunction('koshik')" id="koshik" value="Կոշիկ"> Կոշիկ <br> (80.000 AMD)</button>
+        <button onclick="myFunction('payusak')" id="payusak" value="Պայուսակ"> Պայուսակ <br> (100.000 AMD)</button>
+
+
+        <!-- <p>Ընտրեք վճարման եղանակը </p>
+
+        <input type="button" value="Կանխիկ" id="kanxik" onclick="x()">
+        <input type="button" value="Անկանխիկ" id="ankanxik" onclick="y()"> -->
+
+
+    <script>
+
+        let tabat = document.getElementById("tabat");
+        let koshik = document.getElementById("koshik");
+        let payusak = document.getElementById("payusak");
+        let kanxik = document.getElementById("kanxik").value;
+        let ankanxik = document.getElementById("ankanxik").value;
+
+
+    function myFunction(productType) {
+
+        if (productType == "tabat") {
+
+            alert("Դուք ստանում եք 30% զեղչ, ապրանքի գինը կազմում է 84000 AMD ");
+
+            if (productType == "tabat") {
+
+            let paymentType = +prompt("Ընտրեք վճարման եղանակը  1. Կանխիկ,  2․ Անկանխիկ");
+
+                if (paymentType === 1) {
+
+                    paymentSize = +prompt("Մուտքագրեք գումարը");
+                    
+                    if ( paymentSize === 84000) {
+
+                        document.write("Դուք գնել եք տաբատ, զեղչված գինը 84000 դրամ");
+                    }
+                    
+                    else if (paymentSize > 84000) {
+
+                        coins3 = paymentSize - 84000
+
+                        document.write(`Դուք գնել եք տաբատ, զեղչված գինը 84000 դրամ, Ձեր մանրը կազմում է ${coins3}`)
+
+                    }
+                }
+
+                else if (paymentType === 2) {
+
+                    prompt("Մուտքագրեք հաշվեհամարը");
+
+                    paymentSize1 = +prompt("Մուտքագրեք գումարը");
+
+                    if ( paymentSize1 === 84000) {
+
+                        document.write("Դուք գնել եք տաբատ, զեղչված գինը 84000 դրամ");
+                    }
+
+
+                    else if (paymentSize1 > 84000) {
+
+                        coins4 = paymentSize1 - 84000;
+
+                        document.write(`Դուք գնել եք տաբատ, զեղչված գինը 84000 դրամ, Ձեր մանրը կազմում է ${coins4}` )
+
+                    }
+
+                }
+
+            }
+        
+        } 
+
+        else if (productType == "koshik") {
+
+            alert("Դուք ստանում եք 10% զեղչ, ապրանքի գինը կազմում է 72000 AMD");
+
+            if (productType == "koshik") {
+
+                let paymentType = +prompt("Ընտրեք վճարման եղանակը  1. Կանխիկ,  2․ Անկանխիկ");
+
+                if (paymentType === 1) {
+
+                    paymentSize2 = +prompt("Մուտքագրեք գումարը");
+
+                    if (paymentSize2 === 72000) {
+
+                        document.write("Դուք գնել եք կոշիկ, զեղչված գինը 72000 դրամ")
+
+                    }
+
+                    else if (paymentSize2 > 72000) {
+
+                        coins2 = paymentSize2 - 72000
+
+                        document.write(`Դուք գնել եք կոշիկ, զեղչված գինը 72000 դրամ, Ձեր մանրը կազմում է ${coins2}`)
+
+                    }
+    
+                }
+
+                else if (paymentType === 2) {
+
+                    prompt("Մուտքագրեք հաշվեհամարը");
+                    paymentSize2 = +prompt("Մուտքագրեք գումարը");
+
+                    if ( paymentSize2 === 72000) {
+
+                        document.write("Դուք գնել եք կոշիկ, զեղչված գինը 72000 դրամ");
+                    }
+
+
+                    else if (paymentSize2 > 72000) {
+
+                        coins2 = paymentSize2 - 72000
+
+                        document.write(`Դուք գնել եք կոշիկ, զեղչված գինը 72000 դրամ, Ձեր մանրը կազմում է ${coins2}`)
+
+                    }
+                }
+            }   
+        } 
+        
+        else if (productType == "payusak") {
+
+            let paymentType = +prompt("Ընտրեք վճարման եղանակը  1. Կանխիկ,  2․ Անկանխիկ");
+
+                if (paymentType === 1) {
+
+                    paymentSize3 = +prompt("Մուտքագրեք գումարը");
+
+                    if ( paymentSize3 === 100000) {
+
+                        document.write("Դուք գնել եք պայուսակ, գինը 100000 դրամ");
+                    }
+
+
+                    else if (paymentSize3 > 100000) {
+
+                        coins1 = paymentSize3 - 100000;
+
+                        document.write(`Դուք գնել եք պայուսակ, գինը 100000 դրամ, Ձեր մանրը կազմում է ${coins1}`)
+
+                    }
+
+                }
+
+                else if (paymentType === 2) {
+
+                    alert("Դուք ստանում եք 5% զեղչ, զեղչված գինը կազմում է 95000")
+                    prompt("Մուտքագրեք հաշվեհամարը");
+                    paymentSize3 =  +prompt("Մուտքագրեք գումարը");
+
+                    if ( paymentSize3 === 95000) {
+
+                        document.write("Դուք գնել եք պայուսակ, զեղչված գինը 95000 դրամ");
+                    }
+
+
+                    else if (paymentSize3 > 95000) {
+
+                        let conis = paymentSize3 - 95000;
+
+                        document.write(`Դուք գնել եք պայուսակ, զեղչված գինը 95000 դրամ, Ձեր մանրը կազմում է ${conis}` )
+
+                    }
+
+                }
+                   
+            }
+        }
+
+</script>
+</body>
+</html>

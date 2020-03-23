@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Third Project</title>
+    </head>
+    <body>
+        <script>
+
+            // Դասավորել տրված երեք Թվերը ըստ նվազման (prompt)
+            // Պետք է քննարկել նաև հավասարի դեպքը
+            
+            let a = +prompt("Number 1");
+            let b = +prompt("Number 2");
+            let c = +prompt("Number 3");
+
+            if ( a > b && a > c && b > c) {
+
+                alert ("a,b,c");
+            }
+
+            else if ( a > b && a > c && c > b) {
+
+                alert ("a,c,b");
+            }
+
+            else if ( b > a && b > c && a > c) {
+
+                alert ("b,a,c");
+            }
+
+            else if ( b > a && b > c && a < c ) {
+
+                alert ("b,c,a");
+            }
+
+            else if ( c > a && c > b && a > b) {
+
+                alert ("c,a,b");
+            }
+
+            else  if ( c > a && c > b && a < b) {
+
+                alert ("c,b,a");
+            }
+
+
+        </script>
+    </body> 
+</html>

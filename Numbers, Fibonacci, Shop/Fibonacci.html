@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Third Project</title>
+    </head>
+    <body>
+        <script>
+
+            // Գտնել Ֆիբոնաչիի թվերի շարքը մինև տրված թիվը (prompt)
+
+            let a = 0;
+            let b = 1;
+            let c;
+
+            let d = +prompt("Write number");
+       
+            if ( d >= 1) {
+
+                document.write("1" + "<br>")
+
+                for ( let i = 1; i < d; i++) {
+
+                    c = a + b;
+                    a = b;
+                    b = c;
+
+                    document.write(c + "<br>")
+                }
+            }
+
+            else if ( d <= 0) {
+
+                document.write("Fibonacci formula don't work please write another number")
+            }
+
+        </script>
+    </body> 
+</html>
