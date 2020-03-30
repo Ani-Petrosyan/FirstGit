@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Fourth Project</title>
+    </head>
+        <body>
+            <script>
+
+                let arraySize = +prompt('Քանի թիվ եք պատրաստվում մուտքագրել');
+                let arr = [];
+
+                
+                    for (let i = 0; i < arraySize; i++) {
+
+                        arr[i] = +prompt('');
+
+                    }
+
+                    let max = arr[0];
+
+                    for (let j = 0; j < arr.length; j++) {
+
+                        if(arr[j] >= max ) {
+
+                            max = arr[j];
+                        }
+                    }
+
+                document.write("Նշված թվերից մեծագույնն է " + max)
+
+        </script>
+    </body>
+</html>
