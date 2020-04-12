@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drum Kit</title>
+	<link rel="stylesheet" href="style.css">
+</head>	
+<body>
+
+	<div class="keys">
+		<button onclick="startBb()" data-key ="65" class="SoundBD"> A <br> BD</button>
+		<button onclick="startCrash()" data-key ="83" class="SoundCrash"> S <br>CRASH</button>
+		<button onclick="startHhc()" data-key ="68" class="SoundHhc"> D <br>HHC</button>
+		<button onclick="startHho()" data-key ="70" class="SoundHho"> F <br>HHO</button>
+		<button onclick="startRide()" data-key ="71" class="SoundRide"> G <br>RIDE</button>
+		<button onclick="startRim()" data-key ="72" class="SoundRim"> H <br>RIM</button>
+		<button onclick="startSd()" data-key ="74" class="SoundBSd"> J <br>SD</button>
+		<button onclick="startTomh()" data-key ="75" class="SoundTomh"> K <br> TOMH</button>
+		<button onclick="startToml()" data-key ="76"  class="SoundToml"> L <br>TOML</button>
+	</div>
+
+	<div class="playing">
+	<audio id="bdAudio" data-key ="65">
+		<source src="bd.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="crashAudio" data-key ="83">
+		<source src="crash.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="hhcAudio" data-key ="68">
+		<source src="hhc.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="hhoAudio" data-key ="70">
+		<source src="hho.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="rideAudio" data-key ="71">
+		<source src="ride.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="rimAudio" data-key ="72">
+		<source src="rim.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="sdAudio" data-key ="74">
+		<source src="sd.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="tohmAudio" data-key ="75">
+		<source src="tomh.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="tomlAudio" data-key ="76">
+		<source src="toml.mp3" type="audio/mpeg">
+	</audio>
+	</div>
+
+ <script>
+
+	 let bd = document.getElementById("bdAudio") 
+	 let crash = document.getElementById("crashAudio") 
+	 let hhc = document.getElementById("hhcAudio") 
+	 let hho = document.getElementById("hhoAudio") 
+	 let ride= document.getElementById("rideAudio") 
+	 let rim = document.getElementById("rimAudio") 
+	 let sd = document.getElementById("sdAudio") 
+	 let tohm = document.getElementById("tohmAudio") 
+	 let toml = document.getElementById("tomlAudio")
+
+	 function startBb() {
+		bd.play(); 
+	 }
+
+	 function startCrash() {
+		crash.play(); 
+	 }
+
+	 function startHhc() {
+		hhc.play(); 
+	 }
+
+	 function startHho() {
+		hho.play(); 
+	 }
+
+	 function startRide() {
+		ride.play(); 
+	 }
+
+	 function startRim() {
+		rim.play(); 
+	 }
+
+	 function startSd() {
+		sd.play(); 
+	 }
+
+	 function startTomh() {
+		tohm.play(); 
+	 }
+
+	 function startToml() {
+		toml.play(); 
+	 }
+
+	 window.addEventListener("keydown", function(e) {
+		 const audio = document.querySelector(`audio[data-key = "${e.keyCode}"]`)
+		 if(!audio) return;
+		 audio.play()  
+	 }) 
+
+ </script>
+ 
+</body>
+</html>

@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(01.jpg);
+    background-color: rgb(26, 22, 22);
+}
+
+.keys {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    margin: 120px;
+    border-radius: 70%;
+    font-weight: bold;
+    font-size: 25px;
+    transform: scale(1.1);
+    border-radius: 50%;
+}
+
+.SoundBD, .SoundCrash, .SoundHhc, .SoundHho, .SoundRide, .SoundRim, .SoundBSd, .SoundTomh, .SoundToml  {
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 25px;
+    border: rgb(165, 167, 159) 2px solid;
+    height: 110px;
+    width: 110px;
+
+}
+
