@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Cars</title>
+
+    </head>
+    <body>
+   
+    </body>
+    <script>
+            const cars = [
+            {
+                model: 'MERCEDES BENZ',
+                year: 2020,
+                owner: 0,
+                service: 1,
+            },
+            {
+                model: 'BMW',
+                year: 2015,
+                wner: 1,
+                service: 1,
+            },
+            {
+                model: 'AUDI',
+                year: 2001,
+                owner: 0,
+                service: 0,
+            },
+            {
+                model: 'LEXUS',
+                year: 2000,
+                owner: 2,
+                service: 0,
+            }
+        ]
+        const owner = [
+            {
+                name: 'Armen',
+                index: 0,
+            },
+            {
+                name: 'Narek',
+                index: 1,
+            },
+            {
+                name: 'Hayk',
+                index: 2,
+            }
+        ]
+        const service = [
+        {
+                serviceName: 'Mec Aniv',
+                index: 0,
+        },
+        {
+                serviceName: 'Poqr Aniv',
+                index: 1,
+        },
+        ];
+
+        //1.a Գտնել քանի մեքենա է սպասարկվում ամեն սերվիսում
+        
+        const serviceNumber = cars.filter((item) => item.service == 0 )
+
+        console.log(serviceNumber.length);
+
+        //1.b Գտնել քանի մեքենա է սպասարկվում ամեն սերվիսում
+
+        const serviceNumber = cars.filter((item) => item.service == 1)
+
+        console.log(serviceNumber.length);
+
+        //2.Գտնել Նարեկի բոլոր մեքենաները
+        const findNarekCars = cars.find((item) => item.owner = "Narek" )
+
+        console.log(findNarekCars);
+
+        //3.Գտնել տաս տարեկանից մեծ մեքենաները
+        const findCars = cars.filter((item) => item.year <= 2010 ) 
+
+        console.log(findCars);
+
+        //5.Փոխել բոլոր մեքենաների տարեթվերը մեկ ով
+
+        const changeYear = cars.map((item) => item.year + 1);
+
+        console.log(changeYear);
+
+        
+
+    </script>
+</html>

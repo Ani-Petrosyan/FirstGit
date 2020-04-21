@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Cars</title>
+
+    </head>
+    <body>
+
+        <p>Enter cars name</p>
+        <input type="taxt" id="nameCars">
+
+        <p>Enter cars year</p>
+        <input type="taxt" id="yearCars">
+        <br>
+        <br>
+
+        <select class="Driver">
+            <option value="driver">Select driver</option>
+            <option value="Armen">Armen</option>
+            <option value="Narek">Narek</option>
+            <option value="Hayk">Hayk</option>
+        </select>
+        <br>
+        <br>
+
+        <select class="Service">
+            <option value="service">Select service</option>
+            <option value="Mec Aniv">Mec Aniv</option>
+            <option value="Poqr Aniv">Poqr Aniv</option>
+        </select>
+        <br>
+        <br>
+
+        <button class="Confirm"> Confirm </button>
+        <br>
+        <br>
+
+        <h2>BMW 5 Series</h2>
+        <a href="https://www.bmw.com/en/index.html"><h3>www.bmw.com</h3></a>
+        <img src="img/2017 BMW 5 Series Has Wireless Apple.jpg" width=500>
+
+        <h2>Mercedes-Benz C-Class</h2>
+        <a href="https://www.mercedes-benz.com/en/"><h3>www.mercedes-benz.com</h3></a>
+        <img src="img/2019 Mercedes-Benz C-Class c220d.jpg" width=500>
+
+        <h2>Audi Sport Tipped </h2>
+        <a href="https://www.audi.com/en.html"><h3>www.audi.com</h3></a>
+        <img src="img/Audi.jpg" width=500>
+
+        <h2>Lexus Sport</h2>
+        <a href="https://www.lexus.com/"><h3>www.lexus.com</h3></a>
+        <img src="img/Lexus.jpg" width=500>
+
+        
+    </body>
+    <script>
+            const cars = [
+            {
+                model: 'MERCEDES BENZ',
+                year: 2020,
+                owner: 0,
+                service: 1,
+            },
+            {
+                model: 'BMW',
+                year: 2015,
+                wner: 1,
+                service: 1,
+            },
+            {
+                model: 'AUDI',
+                year: 2001,
+                owner: 0,
+                service: 0,
+            },
+            {
+                model: 'LEXUS',
+                year: 2000,
+                owner: 2,
+                service: 0,
+            }
+        ]
+        const owner = [
+            {
+                name: 'Armen',
+                index: 0,
+            },
+            {
+                name: 'Narek',
+                index: 1,
+            },
+            {
+                name: 'Hayk',
+                index: 2,
+            }
+        ]
+        const service = [
+        {
+                serviceName: 'Mec Aniv',
+                index: 0,
+        },
+        {
+                serviceName: 'Poqr Aniv',
+                index: 1,
+        },
+        ];
+
+        let newCar = [];
+        const nameCar = document.querySelector("#nameCars")
+        const yearCar = document.querySelector("#yearCars")
+        const driverCar = document.querySelector(".Driver")
+        const serviceCar = document.querySelector(".Service")
+        const addCar = document.querySelector(".Confirm")
+
+        addCar.addEventListener ('click', function () {
+            newCar.push( {
+                model: nameCar.value,
+                year: yearCar.value,
+                owner: driverCar.value,
+                service: serviceCar.value,
+            });
+            console.log(newCar);
+            
+        });
+
+
+        // 4.Ցույց տալ մեքենաները կայքում
+        // 6.Ստեղծել ֆորմա որը կավելացնի մեքենա: Ֆորմայում գրենք , 
+        //Մեքենայի անուն , 
+        //տարեթիվ, 
+        //և ընտրենք համապտասխան վարորդին և 
+        //սերվիսը և սեղմենք ավելացնել կոճակը, Կոճակը սեղմելուց մեքենան ավելանա people, ի մեջ
+
+    </script>
+</html>
